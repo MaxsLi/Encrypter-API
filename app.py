@@ -6,6 +6,7 @@ A REST API for encrypting and decrypting inputs.
 
 from flask import Flask
 from flask_restful import reqparse, Resource, Api, abort
+from flask_cors import CORS
 from httpimport import github_repo
 
 # Importing Encrypter remotely from GitHub
@@ -16,13 +17,14 @@ __author__ = "Shangru Li"
 __copyright__ = "Copyright 2021, Shangru Li"
 __credits__ = "Shangru Li"
 __license__ = "MIT"
-__version__ = "1.2"
+__version__ = "1.3"
 __maintainer__ = "Shangru Li"
 __email__ = "maxsli@protonmail.com"
 __status__ = "Stable"
 
 app = Flask(__name__)
 api = Api(app)
+CORS(app)
 
 parser = reqparse.RequestParser()
 parser.add_argument('input', type=str, help='Input as a text or cypher')
@@ -38,14 +40,14 @@ class Encrypt(Resource):
         try:
             return ED.encrypt(text)
         except SyntaxError as error:
-            abort(400, message=error.msg)
+            abort(400, error=error.msg)
 
     def post(self):
         args = parser.parse_args()
         if args.input is None:
-            abort(400, message="Please provide a text to encrypt.")
+            abort(400, error="Please provide a text to encrypt.")
         else:
-            return {'result': self.encrypt(args.input)}, 201
+            return {'result': self.encrypt(args.input)}, 200
 
 
 class Decrypt(Resource):
@@ -53,14 +55,14 @@ class Decrypt(Resource):
         try:
             return ED.decrypt(cypher)
         except SyntaxError as error:
-            abort(400, message=error.msg)
+            abort(400, error=error.msg)
 
     def post(self):
         args = parser.parse_args()
         if args.input is None:
-            abort(400, message="Please provide a cypher to decrypt.")
+            abort(400, error="Please provide a cypher to decrypt.")
         else:
-            return {'result': self.decrypt(args.input)}, 201
+            return {'result': self.decrypt(args.input)}, 200
 
 
 # adding the defined resources along with their corresponding urls
