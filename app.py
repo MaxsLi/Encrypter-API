@@ -17,7 +17,7 @@ __author__ = "Shangru Li"
 __copyright__ = "Copyright 2021, Shangru Li"
 __credits__ = "Shangru Li"
 __license__ = "MIT"
-__version__ = "1.3"
+__version__ = "1.4"
 __maintainer__ = "Shangru Li"
 __email__ = "maxsli@protonmail.com"
 __status__ = "Stable"
@@ -32,7 +32,12 @@ parser.add_argument('input', type=str, help='Input as a text or cypher')
 
 class Ping(Resource):
     def get(self):
-        return {"status": "ok", "version": __version__}, 200
+        return {"status": "ok"}, 200
+
+
+class Version(Resource):
+    def get(self):
+        return {"encrypter": ED.__version__, "api": __version__}, 200
 
 
 class Encrypt(Resource):
@@ -67,6 +72,7 @@ class Decrypt(Resource):
 
 # adding the defined resources along with their corresponding urls
 api.add_resource(Ping, '/', '/ping')
+api.add_resource(Version, '/version')
 api.add_resource(Encrypt, '/encrypt')
 api.add_resource(Decrypt, '/decrypt')
 

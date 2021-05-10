@@ -25,14 +25,33 @@ Response:
 
 ```json
 {
-  "status": "ok",
-  "version": "1.2"
+  "status": "ok"
 }
 ```
 
 * Response status code: 200
 
 ### Route 2
+
+Request:
+
+* **Route**: https://encrypter-api.herokuapp.com/version
+* **Method**: GET
+
+Response:
+
+* Response body (JSON):
+
+```json
+{
+  "encrypter": "3.3",
+  "api": "1.4"
+}
+```
+
+* Response status code: 200
+
+### Route 3
 
 Request:
 
@@ -68,7 +87,7 @@ Error Response:
 
 * Response status code: 400
 
-### Route 3
+### Route 4
 
 Request:
 
