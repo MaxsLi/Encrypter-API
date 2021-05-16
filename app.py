@@ -8,7 +8,6 @@ from flask import Flask
 from flask_restful import reqparse, Resource, Api, abort
 from flask_cors import CORS
 from httpimport import github_repo
-from importlib import reload
 
 # Importing Encrypter remotely from GitHub
 with github_repo(username='MaxsLi', repo='Encrypter', module='ED'):
@@ -18,7 +17,7 @@ __author__ = "Shangru Li"
 __copyright__ = "Copyright 2021, Shangru Li"
 __credits__ = "Shangru Li"
 __license__ = "MIT"
-__version__ = "1.5"
+__version__ = "1.4"
 __maintainer__ = "Shangru Li"
 __email__ = "maxsli@protonmail.com"
 __status__ = "Stable"
@@ -43,7 +42,6 @@ class Version(Resource):
 
 class Encrypt(Resource):
     def encrypt(self, text):
-        reload(ED)
         try:
             return ED.encrypt(text)
         except SyntaxError as error:
