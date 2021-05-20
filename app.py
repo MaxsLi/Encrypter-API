@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""
-A REST API for encrypting and decrypting inputs.
-"""
+"""A REST API for encrypting and decrypting inputs."""
 
 from flask import Flask
 from flask_restful import reqparse, Resource, Api, abort

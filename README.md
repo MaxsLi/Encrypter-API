@@ -1,8 +1,11 @@
 # Encrypter-API
 
-A REST API of Python script [Encrypter](https://github.com/MaxsLi/Encrypter).
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/697abd5b80404d8e9e8acac31be528b1)](https://www.codacy.com/gh/MaxsLi/Encrypter-API/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=MaxsLi/Encrypter-API&amp;utm_campaign=Badge_Grade)
+![GitHub](https://img.shields.io/github/license/MaxsLi/Encrypter-API)
 
 ## Description
+
+A REST API of Python script [Encrypter](https://github.com/MaxsLi/Encrypter).
 
 This API is written using Python web framework [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 with [Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/).
@@ -15,13 +18,13 @@ API URL: https://encrypter-api.herokuapp.com/
 
 Request:
 
-* **Route**: https://encrypter-api.herokuapp.com/
-* **Route**: https://encrypter-api.herokuapp.com/ping
-* **Method**: GET
+  * **Route**: https://encrypter-api.herokuapp.com/
+  * **Route**: https://encrypter-api.herokuapp.com/ping
+  * **Method**: GET
 
 Response:
 
-* Response body (JSON):
+  * Response body (JSON):
 
 ```json
 {
@@ -29,18 +32,18 @@ Response:
 }
 ```
 
-* Response status code: 200
+  * Response status code: 200
 
 ### Route 2
 
 Request:
 
-* **Route**: https://encrypter-api.herokuapp.com/version
-* **Method**: GET
+  * **Route**: https://encrypter-api.herokuapp.com/version
+  * **Method**: GET
 
 Response:
 
-* Response body (JSON):
+  * Response body (JSON):
 
 ```json
 {
@@ -49,15 +52,15 @@ Response:
 }
 ```
 
-* Response status code: 200
+  * Response status code: 200
 
 ### Route 3
 
 Request:
 
-* **Route**: https://encrypter-api.herokuapp.com/encrypt
-* **Method**: POST
-* **Query Parameter**:
+  * **Route**: https://encrypter-api.herokuapp.com/encrypt
+  * **Method**: POST
+  * **Query Parameter**:
 
 | **Field** | **Type** | **Description** |
 | --------- | -------- | --------------- |
@@ -65,7 +68,7 @@ Request:
 
 Successful Response:
 
-* Response body (JSON):
+  * Response body (JSON):
 
 ```json
 {
@@ -73,11 +76,11 @@ Successful Response:
 }
 ```
 
-* Response status code: 200
+  * Response status code: 200
 
 Error Response:
 
-* Response body (JSON):
+  * Response body (JSON):
 
 ```json
 {
@@ -85,15 +88,15 @@ Error Response:
 }
 ```
 
-* Response status code: 400
+  * Response status code: 400
 
 ### Route 4
 
 Request:
 
-* **Route**: https://encrypter-api.herokuapp.com/decrypt
-* **Method**: POST
-* **Query Parameter**:
+  * **Route**: https://encrypter-api.herokuapp.com/decrypt
+  * **Method**: POST
+  * **Query Parameter**:
 
 | **Field** | **Type** | **Description** |
 | --------- | -------- | --------------- |
@@ -101,7 +104,7 @@ Request:
 
 Successful Response:
 
-* Response body (JSON):
+  * Response body (JSON):
 
 ```json
 {
@@ -109,11 +112,11 @@ Successful Response:
 }
 ```
 
-* Response status code: 200
+  * Response status code: 200
 
 Error Response:
 
-* Response body (JSON):
+  * Response body (JSON):
 
 ```json
 {
@@ -121,4 +124,4 @@ Error Response:
 }
 ```
 
-* Response status code: 400
+  * Response status code: 400
