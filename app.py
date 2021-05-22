@@ -15,7 +15,7 @@ __author__ = "Shangru Li"
 __copyright__ = "Copyright 2021, Shangru Li"
 __credits__ = "Shangru Li"
 __license__ = "MIT"
-__version__ = "1.4"
+__version__ = "1.5"
 __maintainer__ = "Shangru Li"
 __email__ = "maxsli@protonmail.com"
 __status__ = "Stable"
@@ -39,33 +39,39 @@ class Version(Resource):
 
 
 class Encrypt(Resource):
-    def encrypt(self, text):
-        try:
-            return ED.encrypt(text)
-        except SyntaxError as error:
-            abort(400, error=error.msg)
-
-    def post(self):
+    def __init__(self):
         args = parser.parse_args()
         if args.input is None:
             abort(400, error="Please provide a text to encrypt.")
         else:
-            return {'result': self.encrypt(args.input)}, 200
+            self.input = args.input
 
-
-class Decrypt(Resource):
-    def decrypt(self, cypher):
+    def encrypt(self):
         try:
-            return ED.decrypt(cypher)
+            return ED.encrypt(self.input)
         except SyntaxError as error:
             abort(400, error=error.msg)
 
     def post(self):
+        return {'result': self.encrypt()}, 200
+
+
+class Decrypt(Resource):
+    def __init__(self):
         args = parser.parse_args()
         if args.input is None:
             abort(400, error="Please provide a cypher to decrypt.")
         else:
-            return {'result': self.decrypt(args.input)}, 200
+            self.input = args.input
+
+    def decrypt(self):
+        try:
+            return ED.decrypt(self.input)
+        except SyntaxError as error:
+            abort(400, error=error.msg)
+
+    def post(self):
+        return {'result': self.decrypt()}, 200
 
 
 # adding the defined resources along with their corresponding urls
