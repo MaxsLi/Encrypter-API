@@ -18,8 +18,8 @@ API URL: [https://encrypter-api.herokuapp.com/](https://encrypter-api.herokuapp.
 
 Request:
 
-* **Route**: https://encrypter-api.herokuapp.com/
-* **Route**: https://encrypter-api.herokuapp.com/ping
+* **Route**: [/](https://encrypter-api.herokuapp.com/)
+* **Route**: [/ping](https://encrypter-api.herokuapp.com/ping)
 * **Method**: GET
 
 Response:
@@ -38,7 +38,7 @@ Response:
 
 Request:
 
-* **Route**: https://encrypter-api.herokuapp.com/version
+* **Route**: [/version](https://encrypter-api.herokuapp.com/version)
 * **Method**: GET
 
 Response:
@@ -58,7 +58,7 @@ Response:
 
 Request:
 
-* **Route**: https://encrypter-api.herokuapp.com/encrypt
+* **Route**: [/encrypt](https://encrypter-api.herokuapp.com/encrypt)
 * **Method**: POST
 * **Query Parameter**:
 
@@ -94,7 +94,7 @@ Error Response:
 
 Request:
 
-* **Route**: https://encrypter-api.herokuapp.com/decrypt
+* **Route**: [/decrypt](https://encrypter-api.herokuapp.com/decrypt)
 * **Method**: POST
 * **Query Parameter**:
 
