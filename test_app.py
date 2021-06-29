@@ -56,10 +56,10 @@ def test_decrypt_cypher_error(api):
 
 
 def test_decrypt(api):
-    input: str = "hello"
-    response = api.post('/encrypt', data=dict(input=input))
+    text: str = "hello"
+    response = api.post('/encrypt', data=dict(input=text))
     assert response.status_code == 200
     cypher: str = response.json['result']
     response = api.post('/decrypt', data=dict(input=cypher))
     assert response.status_code == 200
-    assert response.json['result'] == input
+    assert response.json['result'] == text
