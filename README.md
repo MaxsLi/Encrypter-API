@@ -2,6 +2,7 @@
 
 [![API Testing](https://github.com/li-shangru/Encrypter-API/actions/workflows/api_testing.yml/badge.svg)](https://github.com/li-shangru/Encrypter-API/actions/workflows/api_testing.yml)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/697abd5b80404d8e9e8acac31be528b1)](https://www.codacy.com/gh/li-shangru/Encrypter-API/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=li-shangru/Encrypter-API&amp;utm_campaign=Badge_Grade)
+[![CodeQL](https://github.com/li-shangru/Encrypter-API/actions/workflows/codeql.yml/badge.svg)](https://github.com/li-shangru/Encrypter-API/actions/workflows/codeql.yml)
 ![GitHub](https://img.shields.io/github/license/li-shangru/Encrypter-API)
 
 ## Description
