@@ -1,4 +1,4 @@
-# [Encrypter-API](https://encrypter-api.herokuapp.com/)
+# [Encrypter-API](https://encrypter-api.onrender.com/)
 
 [![API Testing](https://github.com/li-shangru/Encrypter-API/actions/workflows/api_testing.yml/badge.svg)](https://github.com/li-shangru/Encrypter-API/actions/workflows/api_testing.yml)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/697abd5b80404d8e9e8acac31be528b1)](https://www.codacy.com/gh/li-shangru/Encrypter-API/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=li-shangru/Encrypter-API&amp;utm_campaign=Badge_Grade)
@@ -11,7 +11,7 @@ A REST API of Python script [Encrypter](https://github.com/li-shangru/Encrypter)
 This API is written using Python web framework [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 with [Flask-RESTful](https://flask-restful.readthedocs.io/en/latest/).
 
-API URL: [https://encrypter-api.herokuapp.com/](https://encrypter-api.herokuapp.com/)
+API URL: [https://encrypter-api.onrender.com](https://encrypter-api.onrender.com)
 
 ## Usage
 
@@ -19,8 +19,8 @@ API URL: [https://encrypter-api.herokuapp.com/](https://encrypter-api.herokuapp.
 
 Request:
 
-* **Route**: [/](https://encrypter-api.herokuapp.com/)
-* **Route**: [/ping](https://encrypter-api.herokuapp.com/ping)
+* **Route**: [/](https://encrypter-api.onrender.com/)
+* **Route**: [/ping](https://encrypter-api.onrender.com/ping)
 * **Method**: GET
 
 Response:
@@ -39,7 +39,7 @@ Response:
 
 Request:
 
-* **Route**: [/version](https://encrypter-api.herokuapp.com/version)
+* **Route**: [/version](https://encrypter-api.onrender.com/version)
 * **Method**: GET
 
 Response:
@@ -59,7 +59,7 @@ Response:
 
 Request:
 
-* **Route**: [/encrypt](https://encrypter-api.herokuapp.com/encrypt)
+* **Route**: [/encrypt](https://encrypter-api.onrender.com/encrypt)
 * **Method**: POST
 * **Query Parameter**:
 
@@ -95,7 +95,7 @@ Error Response:
 
 Request:
 
-* **Route**: [/decrypt](https://encrypter-api.herokuapp.com/decrypt)
+* **Route**: [/decrypt](https://encrypter-api.onrender.com/decrypt)
 * **Method**: POST
 * **Query Parameter**:
 
